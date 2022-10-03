@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <script>
+            var berat = [30,30,20,50,40,50], beratPalingRingan = 999, i, bilBerat = berat.length;
+
+            for (i=0; i<bilBerat; i++) {
+                if (berat[i] < beratPalingRingan) {
+                    beratPalingRingan = berat[i];
+                }
+            }
+
+            document.write("Berat beg paling ringan (di kalangan 6 orang murid): " + beratPalingRingan + " kg");
+        </script>
+    </body>
+</html>

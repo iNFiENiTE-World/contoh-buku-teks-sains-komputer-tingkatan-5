@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            var queueNo = [], noBaru, noKeluar;
+
+            noBaru = 5;
+            queueNo.unshift(noBaru);
+            document.write("<br>Nombor Baru Masuk: ", noBaru);
+
+            noBaru = -1;
+            queueNo.unshift(noBaru);
+            document.write("<br>Nombor Baru Masuk: ", noBaru);
+
+            noBaru = 12;
+            queueNo.unshift(noBaru);
+            document.write("<br>Nombor Baru Masuk: ", noBaru);
+
+            document.write("<br><br>Senarai Nombor Terkini Dalam Giliran (Queue):<br>-----------------------");
+            document.write("<br>", queueNo);
+
+            noKeluar = queueNo.pop();
+            document.write("<br><br>Nombor Dikeluarkan: ", noKeluar);
+            document.write("<br><br>Senarai Nombor Terkini Dalam Giliran (Queue):<br>-----------------------");
+            document.write("<br>", queueNo);
+
+        </script>
+    </body>
+</html>
