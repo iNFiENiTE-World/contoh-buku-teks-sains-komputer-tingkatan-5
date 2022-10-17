@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <script>
+            var tinggi = [6,7,7,6,5,6], i, j, min, sementara;
+            var bilKetinggian = tinggi.length;
+            document.write("Senarai ketinggian pelajar sebelum isih: " + tinggi);
+            for (i=0; i<bilKetinggian-1; i++) {
+                min = i;
+
+                // Mencari indeks nilai tertinggi
+                for (j=i+1; j<bilKetinggian; j++) {
+                    if (tinggi[j] < tinggi[min]) {
+                        min = j;
+                    }
+                }
+                // Mengubah kedudukan jika terdapat nilai lebih tinggi dari indeks i
+                if (min != i) {
+                    sementara = tinggi[i];
+                    tinggi[i] = tinggi[min];
+                    tinggi[min] = sementara;
+                }
+            }
+            document.write("<br>Senarai ketinggian pelajar selepas isihan pilih secara menaik: " + tinggi);
+        </script>
+    </body>
+</html>

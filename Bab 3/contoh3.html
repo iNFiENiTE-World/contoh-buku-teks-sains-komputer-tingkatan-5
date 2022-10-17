@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script>
+            var no = [5,1,4,3,2];
+            var bilNombor = no.length, i, j;
+            var sementara = no[0];
+
+            for (i=0; i<bilNombor-1; i++) {
+                for (j=0; j<bilNombor-i-1; j++) {
+                    if (no[j] > no[j+1]) {
+                        sementara = no[j];
+                        no[j] = no[j+1];
+                        no[j+1] = sementara;
+                    }
+                }
+            }
+            document.write(no);
+        </script>
+    </body>
+</html>

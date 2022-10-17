@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script>
+            var no = [5,1,4,3,2], i, j, min, sementara;
+            var bilNombor = no.length;
+            for (i=0; i<bilNombor-1; i++) {
+                min = i;
+                for (j=i+1; j<bilNombor; j++) {
+                    if (no[j] < no[min]) {
+                        min = j;
+                    }
+                }
+                if (min != i) {
+                    sementara = no[i];
+                    no[i] = no[min];
+                    no[min] = sementara;
+                }
+            }
+            document.write(no);
+        </script>
+    </body>
+</html>

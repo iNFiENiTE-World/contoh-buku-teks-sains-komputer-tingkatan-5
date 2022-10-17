@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            var no = [1,2,3,4,5,6,7,8,9,10];
+            var noCarian = 4;
+            var indeksAwal = 0, indeksAkhir = no.length - 1, indeksTengah = Math.floor((indeksAkhir + indeksAwal) / 2);
+
+            document.write("No Carian:", noCarian);
+            while(no[indeksTengah] != noCarian && indeksAwal < indeksAkhir) {
+                if (no[indeksTengah] > noCarian) {
+                    indeksAkhir = indeksTengah - 1;
+                    document.write("<br>No tengah yang dirujuk: ", no[indeksTengah], " (Pergi ke sebelah kiri) ");
+                }
+                else {
+                    if (no[indeksTengah] < noCarian) {
+                        indeksAwal = indeksTengah + 1;
+                        document.write("<br>No tengah yang dirujuk: ", no[indeksTengah], " (Pergi ke sebelah kanan) ");
+                    }
+                }
+                indeksTengah = Math.floor((indeksAkhir + indeksAwal) / 2);
+            }
+            if (no[indeksTengah] == noCarian) {
+                document.write('<br>No tengah yang dirujuk:', no[indeksTengah], ' (Jumpa) ');
+            }
+        </script>
+    </body>
+</html>
